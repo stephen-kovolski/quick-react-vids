@@ -1,24 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import Name from './components/Name'
+import Welcome from './components/Welcome';
+import IsHere from './components/IsHere';
+import Button from './components/Button';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{display: 'flex', alignItems: 'center',justifyContent: 'center'}}>
+      <div>
+        
+        <Welcome />
+        <Name />
+        <IsHere />
+        <Button />
+        
+        <form>
+            <p>
+            Would you like to add a new student?
+            </p>
+            <input id="name" placeholder='Enter Name Here'></input>
+        </form>
+      </div>
+      
+      
     </div>
+
   );
 }
 
